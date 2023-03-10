@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\яп\\PostClasses\\PostClasses\\PostClasses.csproj": {}
+    "C:\\Users\\user\\Desktop\\Post-s-Classes\\PostClasses\\PostClasses\\PostClasses.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\яп\\PostClasses\\PostClasses\\PostClasses.csproj": {
+    "C:\\Users\\user\\Desktop\\Post-s-Classes\\PostClasses\\PostClasses\\PostClasses.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\яп\\PostClasses\\PostClasses\\PostClasses.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\Post-s-Classes\\PostClasses\\PostClasses\\PostClasses.csproj",
         "projectName": "PostClasses",
-        "projectPath": "C:\\Users\\user\\Desktop\\яп\\PostClasses\\PostClasses\\PostClasses.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\Post-s-Classes\\PostClasses\\PostClasses\\PostClasses.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\яп\\PostClasses\\PostClasses\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\Post-s-Classes\\PostClasses\\PostClasses\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

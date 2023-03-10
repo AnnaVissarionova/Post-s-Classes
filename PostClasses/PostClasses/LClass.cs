@@ -9,9 +9,13 @@ namespace PostClasses
 {
     public class LClass
     {
-        /*
-         * Главная функция, проверяет, является ли заданная eval'ом функция линейной
-         */
+        ///
+
+        /// <summary>
+        /// Главная функция, проверяет, является ли заданная eval'ом функция линейной
+        /// </summary>
+        /// <param name="eval"> Eval заданной функции </param>
+        /// 
         public static bool Check(int[] eval)
         {
             Debug.Assert((int) Math.Ceiling(Math.Log2(eval.Length)) == (int) Math.Floor(Math.Log2(eval.Length))); 
@@ -33,12 +37,17 @@ namespace PostClasses
     
         }
 
-     
-        /*
-         * Функция, находящая eval по заданному массиву коэффициентов a0, a1 ... am и количеству переменных m
-         */
+
+       
+        /// <summary>
+        /// Функция, находящая eval по заданному массиву коэффициентов a0, a1 ... am и количеству переменных m
+        /// </summary>
+        /// <param name="coef"> массив коэффициентов в АНФ </param>
+        /// <param name="count"> количество переменных функции</param>
+        /// 
         static int[] FindEval(int[] coef, int count) 
         {
+            Debug.Assert((coef.Length > 1) && (count > 0) && (coef.Length == count + 1));
             var num = 0;
             var i = 0;
             int[] res = new int[(int) Math.Pow(2, count)];
@@ -63,12 +72,15 @@ namespace PostClasses
         }
 
 
-        /*
-         * Функция, представляющая заданное число в двоичной СИ ( в виде массива цифр 1 и 0)
-         */
-
+        /// <summary>
+        /// Функция, представляющая заданное число в двоичной СИ ( в виде массива цифр 1 и 0)
+        /// </summary>
+        /// <param name="num"> число, которое необходимо представить в двоичной системе </param>
+        /// <param name="count"> количество разрядов для представления </param>
+        /// 
         static int[] ToBinary(int num, int count)
         {
+            Debug.Assert((num >= 0) && (count > 0) && (num < (int)Math.Pow(2, count)));
             var i = 0;
             int[] res = FillZero(count);
             while (num > 0)
@@ -88,11 +100,14 @@ namespace PostClasses
 
         }
 
-        /*
-        * Функция, заполняющая массив нулями
-        */
+        /// <summary>
+        /// Функция, заполняющая массив нулями
+        /// </summary>
+        /// <param name="count"> размер массива </param>
+        /// 
         static int[] FillZero(int count)
         {
+            Debug.Assert(count > 0);
             var res = new int[count];
             for (var i = 0; i < count; i++)
             {
@@ -101,11 +116,15 @@ namespace PostClasses
             return res;
         }
 
-        /*
-        * Функция, проверяющая массивы на равенство
-        */
+        /// <summary>
+        /// Функция, проверяющая массивы на равенство
+        /// </summary>
+        /// <param name="a"> первый массив </param>
+        /// <param name="b"> второй массив </param>
+        /// 
         static bool ArrEquals(int[] a, int[] b)
         {
+            Debug.Assert((a.Length == b.Length) && (a.Length > 0));
             var res = true;
             for (var i = 0; i < a.Length; i++)
             {

@@ -8,16 +8,20 @@ namespace PostClasses
 {
     public class PClass
     {
-        /*
-       * Функция, проверяет, является ли заданная eval'ом сохраняющей ноль
-       */
+        /// <summary>
+        /// Функция, проверяет, является ли заданная eval'ом сохраняющей ноль
+        /// </summary>
+        /// <param name="eval"> Eval заданной функции </param>
+        /// <returns></returns>
         public static bool CheckP0(int[] eval) {
             return eval[0] == 0;
         }
 
-        /*
-       * Функция, проверяет, является ли заданная eval'ом сохраняющей единицу
-       */
+        /// <summary>
+        /// Функция, проверяет, является ли заданная eval'ом сохраняющей единицу
+        /// </summary>
+        /// <param name="eval">Eval заданной функции</param>
+        /// <returns></returns>
         public static bool CheckP1(int[] eval)
         {
             return eval[eval.Length - 1] == 1;
