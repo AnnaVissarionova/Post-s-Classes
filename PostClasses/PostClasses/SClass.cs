@@ -18,23 +18,13 @@ namespace PostClasses
             var res = true;
             for (var i = 0; i < eval.Length; i++)
             {
-                if (eval[i] != NotOper(eval[eval.Length - i -1]))
+                if (eval[i] != (eval[eval.Length - i - 1] == 0 ? 1 : 0))
                 {
                     res = false;
                     break;
                 }
             }
             return res;
-        }
-
-        /// <summary>
-        /// Функция отрицания для целочисленного типа
-        /// </summary>
-        /// <param name="n"></param>
-        /// <returns></returns>
-        static int NotOper(int n)
-        {
-            return n == 0 ? 1 : 0;
         }
     }
 }

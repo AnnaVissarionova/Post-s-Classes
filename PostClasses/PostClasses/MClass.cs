@@ -9,7 +9,11 @@ namespace PostClasses
 {
     internal class MClass
     {
-
+        /// <summary>
+        /// Главная функция, проверяет, является ли заданная eval'ом функция монотонной
+        /// </summary>
+        /// <param name="eval">Eval заданной функции</param>
+        /// <returns></returns>
         public static bool Check(int[] eval)
         {
             var res = true;
@@ -30,6 +34,14 @@ namespace PostClasses
             return res;
         }
 
+
+
+        /// <summary>
+        /// Функция, проверяющая набор значений переменных на монотонность
+        /// </summary>
+        /// <param name="eval">Eval заданной функции</param>
+        /// <param name="num">Набор в виде десятичного числа для сравнения</param>
+        /// <returns></returns>
         static bool CheckSet(int[] eval, int num)
         {
             var count =(int) Math.Log2(eval.Length);
@@ -48,6 +60,14 @@ namespace PostClasses
             return res;
         }
 
+
+
+        /// <summary>
+        /// Функция, находящая все наборы значений переменных, которые можно сравнить с заданным
+        /// </summary>
+        /// <param name="num">Набор в виде десятичного числа для сравнения</param>
+        /// <param name="count">Количество переменных функции</param>
+        /// <returns></returns>
         static int[] FindComparableSets(int num, int count)
         {
             var res = new int[0];
@@ -66,8 +86,18 @@ namespace PostClasses
             Console.WriteLine();*/
             return res;
         }
+
+
+        /// <summary>
+        /// Функция, проверяющая, сравнимы ли два заданных набора значений переменных
+        /// </summary>
+        /// <param name="num1">Первый набор в виде десятичного числа для сравнения</param>
+        /// <param name="num2">Второй набор в виде десятичного числа для сравнения</param>
+        /// <param name="count">Количество переменных функции</param>
+        /// <returns></returns>
         static bool AreComparable(int num1, int num2, int count)
         {
+            Debug.Assert((num1 >= 0) && (num2 >= 0) && (count > 0));
             var n1 = ToBinary(num1, count);
             var n2 = ToBinary(num2, count);
             var res = true;
