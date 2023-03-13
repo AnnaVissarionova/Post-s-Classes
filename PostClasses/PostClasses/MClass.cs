@@ -78,12 +78,6 @@ namespace PostClasses
                     res = res.Append(i).ToArray();
                 }
             }
-            //Console.WriteLine($"FindComparableSets {num} :");
-            /*foreach (var e in res)
-            {
-                Console.Write($"{e} ");
-            }
-            Console.WriteLine();*/
             return res;
         }
 
@@ -109,8 +103,6 @@ namespace PostClasses
                     break;
                 }
             }
-            //Console.WriteLine($"AreComparable {num1} and {num2} : {res}");
-            //Console.WriteLine();
             return res;
         }
 
@@ -133,7 +125,6 @@ namespace PostClasses
                 i++;
                 num = num / 2;
             }
-
             return res;
         }
 

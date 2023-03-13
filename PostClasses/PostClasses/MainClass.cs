@@ -37,8 +37,6 @@ namespace PostClasses
             {
                 Environment.Exit(0);
             }
-            
-
         }
 
         
@@ -56,16 +54,11 @@ namespace PostClasses
                 Console.WriteLine("Invalid characters.");
                 return false;
             }
-          //Console.WriteLine(s.Length);
-           // Console.WriteLine(Math.Floor(Math.Log2(s.Length)));
-           // Console.WriteLine(Math.Ceiling(Math.Log2(s.Length)));
-
             if ((int) Math.Floor(Math.Log2(s.Length)) != (int)Math.Ceiling(Math.Log2(s.Length)))
             {
                 Console.WriteLine("Wrong length of eval.");
                 return false;
             }
-            
             if(s.Length > 1024)
             {
                 Console.WriteLine($"{(int)Math.Log2(s.Length)} params are too much, but i'll do my best (=^..^=) .");
@@ -85,9 +78,7 @@ namespace PostClasses
             for (var i = 0; i < s.Length; i++)
             {
                 res[i] = int.Parse(""+s[i]);
-                //Console.Write(s[i]);
             }
-            //Console.WriteLine();
             return res;
         }
 
@@ -107,7 +98,6 @@ namespace PostClasses
                 Console.WriteLine(String.Format("|      {0,-2}      |     {1,1}     |", names[i], blng[i] ? "+" : "-"));
                 Console.WriteLine("----------------------------");
             }
-
         }
     }
 }
