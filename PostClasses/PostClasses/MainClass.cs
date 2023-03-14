@@ -44,24 +44,24 @@ namespace PostClasses
         /// <summary>
         /// Функция, проверяющая корректность введенного eval
         /// </summary>
-        /// <param name="s"></param>
+        /// <param name="eval"></param>
         /// <returns></returns>
-        static bool CheckEval(string s)
+        static bool CheckEval(string eval)
         {
             Console.WriteLine();
-            if (Regex.IsMatch(s, @"[^01]"))
+            if (Regex.IsMatch(eval, @"[^01]"))
             {
                 Console.WriteLine("Invalid characters.");
                 return false;
             }
-            if ((int) Math.Floor(Math.Log2(s.Length)) != (int)Math.Ceiling(Math.Log2(s.Length)))
+            if ((int) Math.Floor(Math.Log2(eval.Length)) != (int)Math.Ceiling(Math.Log2(eval.Length)))
             {
                 Console.WriteLine("Wrong length of eval.");
                 return false;
             }
-            if(s.Length > 1024)
+            if(eval.Length > 1024)
             {
-                Console.WriteLine($"{(int)Math.Log2(s.Length)} params are too much, but i'll do my best (=^..^=) .");
+                Console.WriteLine($"{(int)Math.Log2(eval.Length)} params are too much, but i'll do my best (=^..^=) .");
                 Console.WriteLine();
             }
             return true;
@@ -70,14 +70,14 @@ namespace PostClasses
         /// <summary>
         /// Функция, преобразующая eval из строки в массив чисел
         /// </summary>
-        /// <param name="s"></param>
+        /// <param name="eval"></param>
         /// <returns></returns>
-        static int[] ParseEval(string s)
+        static int[] ParseEval(string eval)
         {
-            var res = new int[s.Length];
-            for (var i = 0; i < s.Length; i++)
+            var res = new int[eval.Length];
+            for (var i = 0; i < eval.Length; i++)
             {
-                res[i] = int.Parse(""+s[i]);
+                res[i] = int.Parse(""+eval[i]);
             }
             return res;
         }
@@ -85,7 +85,7 @@ namespace PostClasses
         /// <summary>
         /// Функция, выводящая таблицу классов Поста
         /// </summary>
-        /// <param name="blng"></param>
+        /// <param name="blng"> </param>
         static void PrintTable(bool[] blng) 
         {
             var names = new string[] { "P0", "P1", "L", "S", "M" };

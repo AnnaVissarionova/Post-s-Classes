@@ -26,14 +26,6 @@ namespace PostClasses
             {
                 coef[count - i + 1] = coef[0] ^ eval[(int) Math.Pow(2, i-1)];
             }
-            /*
-            Console.WriteLine("Coeff : ");
-            foreach (var e in coef)
-            {
-                Console.Write(e);
-            }
-            Console.WriteLine();
-            */
             return ArrEquals(FindEval(coef, count), eval);
     
         }
@@ -63,14 +55,6 @@ namespace PostClasses
                 i++;
                 num++;
             }
-            /*
-            Console.WriteLine("FindEval : ");
-            foreach(var e in res)
-            {
-                Console.Write(e);
-            }
-            Console.WriteLine();
-            */
             return res;
         }
 
@@ -92,17 +76,7 @@ namespace PostClasses
                 i++;
                 num = num / 2;
             }
-            /*
-            Console.WriteLine($"ToBinary {num} : ");
-            foreach (var e in res)
-            {
-                Console.Write(e);
-            }
-            Console.WriteLine();
-            */
             return res;
-            
-
         }
 
         /// <summary>

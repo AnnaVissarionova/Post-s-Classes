@@ -22,7 +22,6 @@ namespace PostClasses
                 return res;
             }
             int index = Array.FindIndex(eval, x => x == 1);
-           // Console.WriteLine(index);
             index = index >= 0 ? index : eval.Length;
             for (var i = index; i < eval.Length; i++)
             {
@@ -55,8 +54,6 @@ namespace PostClasses
                     break;
                 }
             }
-           // Console.WriteLine($"CheckSet {num} : {res}");
-          //  Console.WriteLine();
             return res;
         }
 
